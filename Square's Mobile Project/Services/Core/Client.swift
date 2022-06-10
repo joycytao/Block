@@ -15,16 +15,13 @@ struct HTTPClient {
         self.session = session
     }
     
-    func send<Req: Request>(
-        _ request: Req,
-        decisions: [Workflow]? = nil,
-        handler: @escaping (Result<Req.Response, Error>) -> Void)
+    func send<Req: Request>( _ request: Req, callbackQueue: CallbackQueue = .main, decisions: [Workflow]? = nil, handler: @escaping (Result<Req.Response, Error>) -> Void)
     {
         let urlRequest: URLRequest
         do {
             urlRequest = try request.buildRequest()
         } catch {
-            handler(.failure(error))
+            callbackQueue.execute { handler(.failure(error)) }
             return
         }
 
@@ -32,17 +29,18 @@ struct HTTPClient {
             data, response, error in
 
             guard let data = data else {
-                handler(.failure(error ?? ResponseError.nilData))
+                callbackQueue.execute { handler(.failure(error ?? ResponseError.nilData))}
                 return
             }
 
             guard let response = response as? HTTPURLResponse else {
-                handler(.failure(ResponseError.nonHTTPResponse))
+                callbackQueue.execute { handler(.failure(ResponseError.nonHTTPResponse))}
                 return
             }
 
             self.handleDecision(
                 request,
+                callbackQueue: callbackQueue,
                 data: data,
                 response: response,
                 decisions: decisions ?? request.decisions,
@@ -52,12 +50,7 @@ struct HTTPClient {
         task.resume()
     }
     
-    func handleDecision<Req: Request>(
-        _ request: Req,
-        data: Data,
-        response: HTTPURLResponse,
-        decisions: [Workflow],
-        handler: @escaping (Result<Req.Response, Error>) -> Void)
+    func handleDecision<Req: Request>( _ request: Req, callbackQueue: CallbackQueue, data: Data, response: HTTPURLResponse, decisions: [Workflow], handler: @escaping (Result<Req.Response, Error>) -> Void)
     {
         guard !decisions.isEmpty else {
             fatalError("No decision left but did not reach a stop.")
@@ -67,7 +60,7 @@ struct HTTPClient {
         let current = decisions.removeFirst()
 
         guard current.shouldApply(request: request, data: data, response: response) else {
-            handleDecision(request, data: data, response: response, decisions: decisions, handler: handler)
+            handleDecision(request, callbackQueue: callbackQueue, data: data, response: response, decisions: decisions, handler: handler)
             return
         }
 
@@ -75,14 +68,16 @@ struct HTTPClient {
             switch action {
             case .continueWith(let data, let response):
                 self.handleDecision(
-                    request, data: data, response: response, decisions: decisions, handler: handler)
+                    request, callbackQueue: callbackQueue, data: data, response: response, decisions: decisions, handler: handler)
             case .restartWith(let decisions):
                 self.send(request, decisions: decisions, handler: handler)
             case .errored(let error):
-                handler(.failure(error))
+                
+                callbackQueue.execute { handler(.failure(error))}
             case .done(let value):
-                handler(.success(value))
+                callbackQueue.execute { handler(.success(value)) }
             }
         }
     }
+    
 }

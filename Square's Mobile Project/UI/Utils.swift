@@ -54,3 +54,15 @@ extension StoryBoarded where Self: UIViewController {
     }
 }
 
+//protocol NavigationItemDesignable {
+//    
+//    func setSwitchButton()
+//}
+//
+//extension NavigationItemDesignable where Self: UIViewController  {
+//    
+//    func setSwitchButton() {
+//        
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "switch_service"), style: .plain, target: self.parent, action: nil)
+//    }
+//}

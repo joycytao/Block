@@ -15,15 +15,18 @@ class EmployeesListView: UITableViewController, StoryBoarded {
    
     var refresher: UIRefreshControl = UIRefreshControl()
     
+    deinit {
+        ImageManager.shared.purgeCahce()
+    }
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+                
         refresher.addTarget(self, action: #selector(refreshEmployeeData), for: .valueChanged)
         refresher.attributedTitle = NSAttributedString(string: "Refreshing Employee Data")
         
         self.tableView.refreshControl = refresher
-       
         self.tableView.reloadData()
         
     }
@@ -86,7 +89,23 @@ class EmployeesListView: UITableViewController, StoryBoarded {
         cell.typeLabel.text = viewModel?.textOfRoleType(at: indexPath.row) ?? ""
          
         
+        ImageManager.shared.getImage(viewModel?.thumbnailImageOfEmployee(at: indexPath.row), uuid: viewModel?.uuidOfEmployee(at: indexPath.row) ?? "") {  result in
+            
+            switch result {
+            case .success(let image):
+                cell.profileThumbnail.image = image
+            case .failure(let error):
+                print(error.localizedDescription)
+                break
+            }
+            
+        }
+        
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(self.viewModel?.hieghtOfRow() ?? 0)
     }
 }
 

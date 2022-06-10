@@ -11,7 +11,7 @@ import UIKit
 
 class AppCooridnator: BaseCoordinator {
     
-    var rootViewController: RootViewController = {
+    lazy var rootViewController: RootViewController = {
         return RootViewController.instantiate()
     }()
     
@@ -34,10 +34,11 @@ class AppCooridnator: BaseCoordinator {
         guard let window = window else {
             return
         }
+                
+        window.rootViewController = UINavigationController(rootViewController: rootViewController)
+        window.makeKeyAndVisible()
         
         rootViewController.viewModel.loader = self
-        window.rootViewController = rootViewController
-        window.makeKeyAndVisible()
         
     }
 }

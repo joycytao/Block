@@ -27,6 +27,13 @@
 		3D0AAB01285119850087A04C /* EmpolyeesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0AAAFD285119850087A04C /* EmpolyeesListView.swift */; };
 		3D0AAB02285119850087A04C /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0AAAFF285119850087A04C /* EmptyStateView.swift */; };
 		3D0AAB0428512F490087A04C /* EmptyStateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0AAB0328512F490087A04C /* EmptyStateViewModel.swift */; };
+		3D0AAB07285146DD0087A04C /* CallbackQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0AAB06285146DD0087A04C /* CallbackQueue.swift */; };
+		3D0AAB09285159B00087A04C /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0AAB08285159B00087A04C /* ImageDownloader.swift */; };
+		3DF224982851938300DEEDB8 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF224972851938300DEEDB8 /* Record.swift */; };
+		3DF2249A28519B8A00DEEDB8 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2249928519B8A00DEEDB8 /* ImageManager.swift */; };
+		3DF2249C2851A4E300DEEDB8 /* FileIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2249B2851A4E300DEEDB8 /* FileIOManager.swift */; };
+		3DF2249E285236FE00DEEDB8 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2249D285236FE00DEEDB8 /* Cache.swift */; };
+		3DF224A0285250DF00DEEDB8 /* ImageDataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2249F285250DF00DEEDB8 /* ImageDataUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +59,13 @@
 		3D0AAAFD285119850087A04C /* EmpolyeesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmpolyeesListView.swift; sourceTree = "<group>"; };
 		3D0AAAFF285119850087A04C /* EmptyStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		3D0AAB0328512F490087A04C /* EmptyStateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateViewModel.swift; sourceTree = "<group>"; };
+		3D0AAB06285146DD0087A04C /* CallbackQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackQueue.swift; sourceTree = "<group>"; };
+		3D0AAB08285159B00087A04C /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		3DF224972851938300DEEDB8 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		3DF2249928519B8A00DEEDB8 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		3DF2249B2851A4E300DEEDB8 /* FileIOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileIOManager.swift; sourceTree = "<group>"; };
+		3DF2249D285236FE00DEEDB8 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Cache.swift; path = "Square's Mobile Project/ImageManager/Cache/Cache.swift"; sourceTree = SOURCE_ROOT; };
+		3DF2249F285250DF00DEEDB8 /* ImageDataUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +98,7 @@
 		3D0AAAB328503EB90087A04C /* Square's Mobile Project */ = {
 			isa = PBXGroup;
 			children = (
+				3DF224A2285261AC00DEEDB8 /* ImageManager */,
 				3D0AAAED285115DB0087A04C /* App */,
 				3D0AAAD6285057E60087A04C /* UI */,
 				3D0AAAC828503ECD0087A04C /* Services */,
@@ -128,6 +143,7 @@
 		3D0AAADC2850EC340087A04C /* ImageDownloader */ = {
 			isa = PBXGroup;
 			children = (
+				3D0AAB08285159B00087A04C /* ImageDownloader.swift */,
 			);
 			path = ImageDownloader;
 			sourceTree = "<group>";
@@ -177,8 +193,29 @@
 				3D0AAAD4285051A60087A04C /* Errors.swift */,
 				3D0AAACB2850458F0087A04C /* Client.swift */,
 				3D0AAACD2850476D0087A04C /* Protocols.swift */,
+				3D0AAB06285146DD0087A04C /* CallbackQueue.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		3DF224A2285261AC00DEEDB8 /* ImageManager */ = {
+			isa = PBXGroup;
+			children = (
+				3DF2249F285250DF00DEEDB8 /* ImageDataUtils.swift */,
+				3DF2249928519B8A00DEEDB8 /* ImageManager.swift */,
+				3DF224A3285261BD00DEEDB8 /* Cache */,
+			);
+			path = ImageManager;
+			sourceTree = "<group>";
+		};
+		3DF224A3285261BD00DEEDB8 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				3DF224972851938300DEEDB8 /* Record.swift */,
+				3DF2249D285236FE00DEEDB8 /* Cache.swift */,
+				3DF2249B2851A4E300DEEDB8 /* FileIOManager.swift */,
+			);
+			path = Cache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,20 +291,27 @@
 			files = (
 				3D0AAB00285119850087A04C /* EmpolyeesListViewModel.swift in Sources */,
 				3D0AAAD5285051A60087A04C /* Errors.swift in Sources */,
+				3DF224982851938300DEEDB8 /* Record.swift in Sources */,
 				3D0AAB01285119850087A04C /* EmpolyeesListView.swift in Sources */,
 				3D0AAAEA28510A680087A04C /* EmployeeListCell.swift in Sources */,
 				3D0AAAB928503EB90087A04C /* RootViewController.swift in Sources */,
 				3D0AAAE32850ECE60087A04C /* UIProtocols.swift in Sources */,
 				3D0AAAEF2851177D0087A04C /* AppCoordinator.swift in Sources */,
+				3DF2249C2851A4E300DEEDB8 /* FileIOManager.swift in Sources */,
 				3D0AAAD9285058F20087A04C /* Utils.swift in Sources */,
+				3DF2249A28519B8A00DEEDB8 /* ImageManager.swift in Sources */,
+				3D0AAB09285159B00087A04C /* ImageDownloader.swift in Sources */,
 				3D0AAACA285042800087A04C /* EmployeeResponse.swift in Sources */,
 				3D0AAACE2850476D0087A04C /* Protocols.swift in Sources */,
+				3D0AAB07285146DD0087A04C /* CallbackQueue.swift in Sources */,
 				3D0AAB02285119850087A04C /* EmptyStateView.swift in Sources */,
 				3D0AAAD128504AA10087A04C /* EmployeeRequest.swift in Sources */,
 				3D0AAAEC285115C20087A04C /* Coordinator.swift in Sources */,
 				3D0AAACC2850458F0087A04C /* Client.swift in Sources */,
 				3D0AAB0428512F490087A04C /* EmptyStateViewModel.swift in Sources */,
 				3D0AAAB528503EB90087A04C /* AppDelegate.swift in Sources */,
+				3DF224A0285250DF00DEEDB8 /* ImageDataUtils.swift in Sources */,
+				3DF2249E285236FE00DEEDB8 /* Cache.swift in Sources */,
 				3D0AAAE62850ED340087A04C /* RootViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

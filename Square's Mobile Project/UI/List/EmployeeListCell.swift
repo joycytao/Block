@@ -26,6 +26,11 @@ class EmployeeListCell: UITableViewCell {
     @IBOutlet weak var teamLabel: UILabel!
     @IBOutlet weak var emailLabel: ClickableLabel!
     @IBOutlet weak var phoneLabel: ClickableLabel!
-    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel! {
+        didSet {
+            typeLabel.layer.cornerRadius = 4
+            typeLabel.clipsToBounds = true
+        }
+    }
     @IBOutlet weak var profileThumbnail: UIImageView!
 }

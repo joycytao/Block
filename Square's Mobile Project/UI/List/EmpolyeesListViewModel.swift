@@ -42,6 +42,10 @@ class EmployeeViewModel {
         return datasource.count
     }
     
+    func uuidOfEmployee(at index: Int) -> String {
+        return employeeOfIndex(at: index).uuid
+    }
+    
     func nameOfEmployee(at index: Int) -> String {
         
         return employeeOfIndex(at: index).fullName
@@ -63,6 +67,10 @@ class EmployeeViewModel {
         return employeeOfIndex(at: index).phoneNumber
     }
     
+    func thumbnailImageOfEmployee(at index: Int) -> URL? {
+        return URL(string: employeeOfIndex(at: index).photourlSmall)
+    }
+    
     private func roleTypeOfEmployee(at index: Int) -> EmployeeType {
        
         return employeeOfIndex(at: index).employeeType
@@ -75,11 +83,11 @@ class EmployeeViewModel {
         
         switch type {
         case .fullTime:
-            return .green
+            return UIColor(red: 153/255, green: 204/255, blue: 255/255, alpha: 1)
         case .partTime:
-            return .yellow
+            return UIColor(red: 255/255, green: 229/255, blue: 204/255, alpha: 1)
         case .contractor:
-            return .gray
+            return .lightGray
         }
     }
     
@@ -96,5 +104,10 @@ class EmployeeViewModel {
         case .contractor:
             return "C"
         }
+    }
+    
+    func hieghtOfRow() -> Float {
+        
+        return datasource.count == 0 ? 0.0 : 120.0
     }
 }
