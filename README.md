@@ -35,6 +35,5 @@ Image Downloader. I proabably miss some scenarios and doesn't have any sercuity 
 Not really. Take reference from some stack overflow posts but I did modify the code for my implementation. Other part is form project I've worked before. 
 
 ## Is there any other information you’d like us to know?
-Unit Test Coverage 
-![alt text][https://github.com/joycytao/Block/blob/master/Screen%20Shot%202022-06-10%20at%209.54.51%20PM.png)
 
+![alt text](https://github.com/joycytao/Block/blob/master/Screen%20Shot%202022-06-10%20at%209.54.51%20PM.png)
