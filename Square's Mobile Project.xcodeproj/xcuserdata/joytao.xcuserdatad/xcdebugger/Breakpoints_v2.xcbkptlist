@@ -14,9 +14,25 @@
             filePath = "Square&apos;s Mobile Project/ImageManager/ImageManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "writeToDisk(_:image:)"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "ImageManager"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B6878DDC-8B1A-488C-B3A7-F2C0CDC8F8D2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Square&apos;s Mobile ProjectTests/EmployeeTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "getEmployee(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

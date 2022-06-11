@@ -29,12 +29,27 @@
 		3D0AAB0428512F490087A04C /* EmptyStateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0AAB0328512F490087A04C /* EmptyStateViewModel.swift */; };
 		3D0AAB07285146DD0087A04C /* CallbackQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0AAB06285146DD0087A04C /* CallbackQueue.swift */; };
 		3D0AAB09285159B00087A04C /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0AAB08285159B00087A04C /* ImageDownloader.swift */; };
+		3D5B45C32853DEA400FE320C /* employee.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D5B45C22853DEA400FE320C /* employee.json */; };
+		3D5B45C52853DFA400FE320C /* malformed.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D5B45C42853DFA400FE320C /* malformed.json */; };
 		3DF224982851938300DEEDB8 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF224972851938300DEEDB8 /* Record.swift */; };
 		3DF2249A28519B8A00DEEDB8 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2249928519B8A00DEEDB8 /* ImageManager.swift */; };
 		3DF2249C2851A4E300DEEDB8 /* FileIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2249B2851A4E300DEEDB8 /* FileIOManager.swift */; };
 		3DF2249E285236FE00DEEDB8 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2249D285236FE00DEEDB8 /* Cache.swift */; };
-		3DF224A0285250DF00DEEDB8 /* ImageDataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2249F285250DF00DEEDB8 /* ImageDataUtils.swift */; };
+		3DF224AD2853CA9100DEEDB8 /* Square_s_Mobile_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF224AC2853CA9100DEEDB8 /* Square_s_Mobile_ProjectTests.swift */; };
+		3DF224B82853CD6800DEEDB8 /* small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3DF224B72853CD6800DEEDB8 /* small.jpg */; };
+		3DF224BA2853D30A00DEEDB8 /* EmployeeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF224B92853D30A00DEEDB8 /* EmployeeTest.swift */; };
+		3DF224BC2853D57200DEEDB8 /* LoaderUtils .swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF224BB2853D57200DEEDB8 /* LoaderUtils .swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3DF224AF2853CA9100DEEDB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D0AAAA928503EB90087A04C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D0AAAB028503EB90087A04C;
+			remoteInfo = "Square's Mobile Project";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3D0AAAB128503EB90087A04C /* Square's Mobile Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Square's Mobile Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,15 +76,29 @@
 		3D0AAB0328512F490087A04C /* EmptyStateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateViewModel.swift; sourceTree = "<group>"; };
 		3D0AAB06285146DD0087A04C /* CallbackQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackQueue.swift; sourceTree = "<group>"; };
 		3D0AAB08285159B00087A04C /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		3D5B45C22853DEA400FE320C /* employee.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = employee.json; sourceTree = "<group>"; };
+		3D5B45C42853DFA400FE320C /* malformed.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = malformed.json; sourceTree = "<group>"; };
 		3DF224972851938300DEEDB8 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		3DF2249928519B8A00DEEDB8 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		3DF2249B2851A4E300DEEDB8 /* FileIOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileIOManager.swift; sourceTree = "<group>"; };
 		3DF2249D285236FE00DEEDB8 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Cache.swift; path = "Square's Mobile Project/ImageManager/Cache/Cache.swift"; sourceTree = SOURCE_ROOT; };
-		3DF2249F285250DF00DEEDB8 /* ImageDataUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataUtils.swift; sourceTree = "<group>"; };
+		3DF224AA2853CA9100DEEDB8 /* Square's Mobile ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Square's Mobile ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DF224AC2853CA9100DEEDB8 /* Square_s_Mobile_ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Square_s_Mobile_ProjectTests.swift; sourceTree = "<group>"; };
+		3DF224AE2853CA9100DEEDB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DF224B72853CD6800DEEDB8 /* small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = small.jpg; sourceTree = "<group>"; };
+		3DF224B92853D30A00DEEDB8 /* EmployeeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTest.swift; sourceTree = "<group>"; };
+		3DF224BB2853D57200DEEDB8 /* LoaderUtils .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoaderUtils .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3D0AAAAE28503EB90087A04C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DF224A72853CA9100DEEDB8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -83,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				3D0AAAB328503EB90087A04C /* Square's Mobile Project */,
+				3DF224AB2853CA9100DEEDB8 /* Square's Mobile ProjectTests */,
 				3D0AAAB228503EB90087A04C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				3D0AAAB128503EB90087A04C /* Square's Mobile Project.app */,
+				3DF224AA2853CA9100DEEDB8 /* Square's Mobile ProjectTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,7 +232,6 @@
 		3DF224A2285261AC00DEEDB8 /* ImageManager */ = {
 			isa = PBXGroup;
 			children = (
-				3DF2249F285250DF00DEEDB8 /* ImageDataUtils.swift */,
 				3DF2249928519B8A00DEEDB8 /* ImageManager.swift */,
 				3DF224A3285261BD00DEEDB8 /* Cache */,
 			);
@@ -216,6 +246,20 @@
 				3DF2249B2851A4E300DEEDB8 /* FileIOManager.swift */,
 			);
 			path = Cache;
+			sourceTree = "<group>";
+		};
+		3DF224AB2853CA9100DEEDB8 /* Square's Mobile ProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				3DF224B72853CD6800DEEDB8 /* small.jpg */,
+				3DF224AC2853CA9100DEEDB8 /* Square_s_Mobile_ProjectTests.swift */,
+				3DF224AE2853CA9100DEEDB8 /* Info.plist */,
+				3DF224B92853D30A00DEEDB8 /* EmployeeTest.swift */,
+				3DF224BB2853D57200DEEDB8 /* LoaderUtils .swift */,
+				3D5B45C22853DEA400FE320C /* employee.json */,
+				3D5B45C42853DFA400FE320C /* malformed.json */,
+			);
+			path = "Square's Mobile ProjectTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +282,24 @@
 			productReference = 3D0AAAB128503EB90087A04C /* Square's Mobile Project.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3DF224A92853CA9100DEEDB8 /* Square's Mobile ProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DF224B12853CA9100DEEDB8 /* Build configuration list for PBXNativeTarget "Square's Mobile ProjectTests" */;
+			buildPhases = (
+				3DF224A62853CA9100DEEDB8 /* Sources */,
+				3DF224A72853CA9100DEEDB8 /* Frameworks */,
+				3DF224A82853CA9100DEEDB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3DF224B02853CA9100DEEDB8 /* PBXTargetDependency */,
+			);
+			name = "Square's Mobile ProjectTests";
+			productName = "Square's Mobile ProjectTests";
+			productReference = 3DF224AA2853CA9100DEEDB8 /* Square's Mobile ProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -250,6 +312,10 @@
 				TargetAttributes = {
 					3D0AAAB028503EB90087A04C = {
 						CreatedOnToolsVersion = 11.7;
+					};
+					3DF224A92853CA9100DEEDB8 = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 3D0AAAB028503EB90087A04C;
 					};
 				};
 			};
@@ -267,6 +333,7 @@
 			projectRoot = "";
 			targets = (
 				3D0AAAB028503EB90087A04C /* Square's Mobile Project */,
+				3DF224A92853CA9100DEEDB8 /* Square's Mobile ProjectTests */,
 			);
 		};
 /* End PBXProject section */
@@ -279,6 +346,16 @@
 				3D0AAAC128503EBB0087A04C /* LaunchScreen.storyboard in Resources */,
 				3D0AAABE28503EBB0087A04C /* Assets.xcassets in Resources */,
 				3D0AAABC28503EB90087A04C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DF224A82853CA9100DEEDB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DF224B82853CD6800DEEDB8 /* small.jpg in Resources */,
+				3D5B45C52853DFA400FE320C /* malformed.json in Resources */,
+				3D5B45C32853DEA400FE320C /* employee.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,13 +387,30 @@
 				3D0AAACC2850458F0087A04C /* Client.swift in Sources */,
 				3D0AAB0428512F490087A04C /* EmptyStateViewModel.swift in Sources */,
 				3D0AAAB528503EB90087A04C /* AppDelegate.swift in Sources */,
-				3DF224A0285250DF00DEEDB8 /* ImageDataUtils.swift in Sources */,
 				3DF2249E285236FE00DEEDB8 /* Cache.swift in Sources */,
 				3D0AAAE62850ED340087A04C /* RootViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3DF224A62853CA9100DEEDB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DF224BC2853D57200DEEDB8 /* LoaderUtils .swift in Sources */,
+				3DF224BA2853D30A00DEEDB8 /* EmployeeTest.swift in Sources */,
+				3DF224AD2853CA9100DEEDB8 /* Square_s_Mobile_ProjectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3DF224B02853CA9100DEEDB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D0AAAB028503EB90087A04C /* Square's Mobile Project */;
+			targetProxy = 3DF224AF2853CA9100DEEDB8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3D0AAABA28503EB90087A04C /* Main.storyboard */ = {
@@ -488,6 +582,46 @@
 			};
 			name = Release;
 		};
+		3DF224B22853CA9100DEEDB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9YSU4U3698;
+				INFOPLIST_FILE = "Square's Mobile ProjectTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joycytao.Square-s-Mobile-ProjectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Square's Mobile Project.app/Square's Mobile Project";
+			};
+			name = Debug;
+		};
+		3DF224B32853CA9100DEEDB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9YSU4U3698;
+				INFOPLIST_FILE = "Square's Mobile ProjectTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joycytao.Square-s-Mobile-ProjectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Square's Mobile Project.app/Square's Mobile Project";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -505,6 +639,15 @@
 			buildConfigurations = (
 				3D0AAAC628503EBB0087A04C /* Debug */,
 				3D0AAAC728503EBB0087A04C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DF224B12853CA9100DEEDB8 /* Build configuration list for PBXNativeTarget "Square's Mobile ProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DF224B22853CA9100DEEDB8 /* Debug */,
+				3DF224B32853CA9100DEEDB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

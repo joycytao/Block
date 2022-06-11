@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 
 
-class EmployeeViewModel {
+public class EmployeeViewModel {
     
     var datasource: [Employee] = []
     var error: Error?
     
     var loader: Load?
     
-    convenience init(result: Result<[Employee], Error>) {
+    public convenience init(result: Result<[Employee], Error>) {
         self.init()
         
         switch result {
@@ -38,36 +38,36 @@ class EmployeeViewModel {
         return self.datasource[index]
     }
     
-    func numberOfEmployees() -> Int {
+    public func numberOfEmployees() -> Int {
         return datasource.count
     }
     
-    func uuidOfEmployee(at index: Int) -> String {
+    public func uuidOfEmployee(at index: Int) -> String {
         return employeeOfIndex(at: index).uuid
     }
     
-    func nameOfEmployee(at index: Int) -> String {
+    public func nameOfEmployee(at index: Int) -> String {
         
         return employeeOfIndex(at: index).fullName
         
     }
     
-    func teamOfEmployee(at index: Int) -> String {
+    public func teamOfEmployee(at index: Int) -> String {
         
         return employeeOfIndex(at: index).team
     }
     
-    func emailOfEmployee(at index: Int) -> String {
+    public func emailOfEmployee(at index: Int) -> String {
         
         return employeeOfIndex(at: index).emailAddress
     }
     
-    func phoneOfEmployee(at index: Int) -> String {
+    public func phoneOfEmployee(at index: Int) -> String {
         
         return employeeOfIndex(at: index).phoneNumber
     }
     
-    func thumbnailImageOfEmployee(at index: Int) -> URL? {
+    public func thumbnailImageOfEmployee(at index: Int) -> URL? {
         return URL(string: employeeOfIndex(at: index).photourlSmall)
     }
     

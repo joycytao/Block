@@ -13,7 +13,7 @@ class ImageManager {
     
     static let shared = ImageManager()
     
-    let downloader = ImageDownloader(session: .shared)
+    let downloader = HTTPClient(session: .shared)
     private let cache = Cache(with: CacheConfig.default)
     
     var records: [CacheRecord] = []
@@ -24,6 +24,23 @@ class ImageManager {
         cache.removeAllImages()
     }
     
+    /// Image download logics work with cache and file system
+    ///  1. Check if the image in cache, load from cache if it exist, otherwise move to 2.
+    ///     1.a. Check if the image is in file system; if not, force to write to file system
+    ///
+    ///  2. Check if the image in file system, load from file system amd add file to cache for future use; otherwise, move to 3
+    ///     - if cachereord exist and the state == persisted, update the state == cache
+    ///     - if cecherecord does not exist, create a new one with state == cache
+    ///
+    ///  3. Fetch the cacherecord by id, if cacherecord exists and state == progress, show placeholder image; if not move to 4
+    ///  4. Download image data from url,  create a new cacherecord with state == progress
+    ///     - if success:
+    ///         - add to cache
+    ///         - write to disk
+    ///         - update the cacherecord with state == cache
+    ///     - if failed :
+    ///         - remove the cacherecord
+    ///         - show placehoolder
     func getImage(_ url: URL?, uuid: String, callbackQueue: CallbackQueue = .main, completion: @escaping (Result<UIImage, Error>)->()) {
                 
         guard let url = url else {

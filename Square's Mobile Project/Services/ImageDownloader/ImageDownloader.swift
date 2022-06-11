@@ -9,17 +9,23 @@
 import Foundation
 import UIKit
 
-class ImageDownloader {
+public protocol ImageDownload {
     
-    let session: URLSession
-    init(session: URLSession) {
-        self.session = session
+    func donwnload( _ url: URL, callbackQueue: CallbackQueue, completion: @escaping (Result<UIImage, Error>) -> Void )
+}
+
+public extension ImageDownload {
+    
+    func donwnload( _ url: URL, completion: @escaping (Result<UIImage, Error>) -> Void ) {
+        self.donwnload(url, callbackQueue: .main, completion: completion)
     }
+}
+
+
+extension HTTPClient: ImageDownload {
     
-    func donwnload( _ url: URL, callbackQueue: CallbackQueue = .main, completion: @escaping (Result<UIImage, Error>) -> Void
-        )
+    public func donwnload( _ url: URL, callbackQueue: CallbackQueue, completion: @escaping (Result<UIImage, Error>) -> Void)
     {
-//        print("started download \(url)")
         
         session.dataTask(with: url) { data, response, error in
             

@@ -16,7 +16,7 @@ public enum CallbackQueue {
     case addOperation(OperationQueue)
     case dispatch(DispatchQueue)
     
-    func execute(_ block: @escaping () -> Void) {
+    public func execute(_ block: @escaping () -> Void) {
         
         switch self {
         case .mainAsync:

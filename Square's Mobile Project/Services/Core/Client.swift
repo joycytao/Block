@@ -8,14 +8,14 @@
 
 import Foundation
 
-struct HTTPClient {
+open class HTTPClient {
     
     let session: URLSession
-    init(session: URLSession) {
+    public init(session: URLSession) {
         self.session = session
     }
     
-    func send<Req: Request>( _ request: Req, callbackQueue: CallbackQueue = .main, decisions: [Workflow]? = nil, handler: @escaping (Result<Req.Response, Error>) -> Void)
+    public func send<Req: Request>( _ request: Req, callbackQueue: CallbackQueue = .main, decisions: [Workflow]? = nil, handler: @escaping (Result<Req.Response, Error>) -> Void)
     {
         let urlRequest: URLRequest
         do {
@@ -80,4 +80,16 @@ struct HTTPClient {
         }
     }
     
+}
+
+public protocol DataDownload {
+    
+    func send<Req: Request>( _ request: Req, callbackQueue: CallbackQueue, decisions: [Workflow]?, handler: @escaping (Result<Req.Response, Error>) -> Void)
+}
+
+extension DataDownload {
+    
+    public func send<Req: Request>( _ request: Req, callbackQueue: CallbackQueue? = nil, decisions: [Workflow]? = nil, handler: @escaping (Result<Req.Response, Error>) -> Void) {
+        send(request, callbackQueue: .main, decisions: nil, handler: handler)
+    }
 }
