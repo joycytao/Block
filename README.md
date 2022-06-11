@@ -36,5 +36,5 @@ Not really. Take reference from some stack overflow posts but I did modify the c
 
 ## Is there any other information you’d like us to know?
 Unit Test Coverage 
-![alt text]([https://github.com/joycytao/Block/blob/master/EmptyState.png](https://github.com/joycytao/Block/blob/master/Screen%20Shot%202022-06-10%20at%209.54.51%20PM.png))
+![alt text][https://github.com/joycytao/Block/blob/master/Screen%20Shot%202022-06-10%20at%209.54.51%20PM.png)
 
