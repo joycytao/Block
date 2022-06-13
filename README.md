@@ -15,7 +15,7 @@ Xcode 11.7 with Swift 5
 
 ## What was the reason for your focus? What problems were you trying to solve?
 1. Make network layer more resuable, testable and readable. Follow Single Responsibility Principle. 
-2. Avoid necessary network calls. 
+2. Avoid unnecessary network calls. 
 
 ## How long did you spend on this project?
 3-4 hours in the first 3 days. 2 hr in 2 days on comments and README file. 
