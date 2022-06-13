@@ -36,3 +36,5 @@ Not really. Take reference from some stack overflow posts but I did modify the c
 
 ## Is there any other information you’d like us to know?
 Unit Test coverage rate: 53% 
+
+![alt text](https://github.com/joycytao/Block/blob/master/coverage.png)
