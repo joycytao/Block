@@ -3,6 +3,10 @@
 Xcode 11.7 with Swift 5
 
 ## Steps to run the app
+![alt text](https://github.com/joycytao/Block/blob/master/EmployeeList.png)
+![alt text](https://github.com/joycytao/Block/blob/master/EmptyState.png)
+![alt text](https://github.com/joycytao/Block/blob/master/Action.png)
+
 
 ## What areas of the app did you focus on?
 1. Network Service 
@@ -31,3 +35,4 @@ Image Downloader. I proabably miss some scenarios and doesn't have any sercuity 
 Not really. Take reference from some stack overflow posts but I did modify the code for my implementation. Other part is form project I've worked before. 
 
 ## Is there any other information you’d like us to know?
+Unit Test coverage rate: 53% 
