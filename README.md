@@ -35,6 +35,6 @@ Image Downloader. I proabably miss some scenarios and doesn't have any sercuity 
 Not really. Take reference from some stack overflow posts but I did modify the code for my implementation. Other part is form project I've worked before. 
 
 ## Is there any other information you’d like us to know?
-Unit Test coverage rate: 53% 
+Unit Test coverage rate: 57% 
 
 ![alt text](https://github.com/joycytao/Block/blob/master/coverage.png)
